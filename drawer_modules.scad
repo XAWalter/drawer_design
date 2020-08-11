@@ -1,9 +1,5 @@
 $fn=10;
 
-width = 150;
-length = 190;
-heighth = 55;
-
 module drawer_case(width, length, heighth){
 	difference(){
 		cube([width, length, heighth]);
@@ -59,25 +55,3 @@ module drawer(width,length,heighth){
 		}
 	}
 }
-
-
-
-
-drawer_case(width,length,heighth);
-translate([(width*.05)/2,-length*.06,]){
-	translate([0,0,(heighth*.05)/2]){
-		drawer(width,length,heighth);
-	}
-	translate([0,0,heighth-(heighth*.5)]){
-		drawer(width,length,heighth);
-	}
-}
-//translate([width+2,0,0]){
-//	drawer_shell(width,length,heighth);
-//}
-//
-//translate([width*2,0,0]){
-//	drawer_handle(width,length,heighth);
-//}
-
-	
