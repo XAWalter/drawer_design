@@ -1,21 +1,6 @@
 $fn=10;
 
-module drawer_air_hole(width,length,heighth){
-	translate([width/2,length-5,heighth/2]){
-		rotate([-90,0,0]){
-			hull(){
-				translate([0,heighth/4,0]){
-					cylinder(h=10,d=20);
-				}
-				translate([0,-heighth/4,0]){
-					cylinder(h=10,d=20);
-				}
-			}
-		}
-	}
-}
-
-module drawer_case_1(width, length, heighth){
+module drawer_case(width, length, heighth){
 	difference(){
 		cube([width, length, heighth]);
 		translate([(width*.05)/2,-.1,(heighth*.05)/2]){
@@ -27,14 +12,6 @@ module drawer_case_1(width, length, heighth){
 			}
 		}
 	}
-}
-
-module drawer_case(width,length,heighth){
-	difference(){
-		drawer_case_1(width,length,heighth);
-		drawer_air_hole(width,length,heighth);
-	}
-
 }
 
 module drawer_shell(width, length, heighth){
@@ -78,3 +55,4 @@ module drawer(width,length,heighth){
 		}
 	}
 }
+

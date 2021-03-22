@@ -1,8 +1,8 @@
-include <case.scad>
+include <drawer_modules.scad>
 
-width = 150;
-length = 190;
-heighth = 55;
+width = 100;
+length = 100;
+heighth = 50;
 
 drawer_case(width,length,heighth);
 

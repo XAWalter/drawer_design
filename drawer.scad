@@ -2,8 +2,8 @@ include <case.scad>
 
 $fn = 100;
 
-width = 150;
-length = 190;
-heighth = 55;
+width = 100;
+length = 100;
+heighth = 50;
 
 drawer(width,length,heighth);
